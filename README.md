@@ -16,3 +16,6 @@
 ### 七、使用git备份重要配置文件
 最近不小心把.bash_profile里的配置删掉，导致环境变量全部出错，ls、vi、yarn、node等等都不能用，最后用mac自带的**Time Machine**还原了文件。   
 所以建议大家**使用git记录文件**，在～(主)目录下git init，然后将需要备份的文件add进去，最后commit打上remark，存在**本地仓库**就可以了。
+
+### 八、sticky（粘性）定位
+sticky在与flex一起使用时会失效(原因是flex在副轴上默认是stretch，将副轴宽度拉满即高度拉满，所以sticky会无效)，需要添加align-items： flex-start。(来源：<a href="https://stackoverflow.com/questions/44446671/my-position-sticky-element-isnt-sticky-when-using-flexbox">stackoverflow</a>)
