@@ -1,10 +1,10 @@
 ## React/Redux
 
-### 一、redux-thunk 有什么用，为什么要用?
+#### 一、redux-thunk 有什么用，为什么要用?
 
-### 二、redux-saga 有什么用，和 redux-thunk 有什么区别?
+#### 二、redux-saga 有什么用，和 redux-thunk 有什么区别?
 
-### 三、将 action type 定义为变量的好处
+#### 三、将 action type 定义为变量的好处
 
 例如：
 actions.js
@@ -30,11 +30,13 @@ userList.js
       });
     }
 
-### 十、react 里绑定事件时请使用 evt.target.dataset 代替工厂函数
+#### 十、react 里绑定事件时请使用 evt.target.dataset 代替工厂函数
+
+---
 
 尽量避免例子一，改用例子二的写法
 
-#### 例子一：
+##### 例子一：
 
     handleClick = (index) => {
       return () => {
@@ -48,7 +50,7 @@ userList.js
       })
     }
 
-#### 例子二：
+##### 例子二：
 
     handleClick = evt => {
       console.log(evt.target.dataset.index)
