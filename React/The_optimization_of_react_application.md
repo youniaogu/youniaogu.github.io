@@ -1,6 +1,6 @@
-### React 应用优化
+### React应用优化
 
-#### 使用 evt.target.dataset 代替工厂函数
+#### 使用evt.target.dataset代替工厂函数
 
 尽量避免例子一，改用例子二的写法
 
