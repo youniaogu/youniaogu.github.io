@@ -293,3 +293,4 @@ export function connect(mapStateToProps, mapDispatchToProps) {
 [React Redux with Dan Abramov](https://youtu.be/VJ38wSFbM3A)
 
 [The History and Implementation of React-Redux]("https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/")
+

@@ -34,3 +34,4 @@ import { createSelector } from 'reselect';
 `inputSelectors`可以为数组，也可以是多个函数，里面返回需要用来计算的字段，这些字段会作为`resultFunc`方法的传参，resultFunc则是用来计算最后的`props`（功能对应之前的`mapStateToProps`）
 
 `reselect`会保存`mapStateToProps`的结果，当用来计算的参数未发生改变时（浅比较），`resultFunc`会直接返回旧的计算结果，从而避免了无用的计算开销
+

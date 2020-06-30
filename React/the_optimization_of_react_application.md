@@ -29,3 +29,4 @@
         return <div data-index={index} key={index} onClick={this.handleClick}>index</div>
       })
     }
+

@@ -43,3 +43,4 @@ import { LOAD_USER_LIST, LOAD_USER_INFO } from './actions.js';
 小项目要求快速开发，`action`定义为字符串更为直接，能够加快开发效率
 
 很多时候，我们不能一味的模范，而是要思考为什么要这样做，其中的利与弊是什么，适合自己的才是最好的
+
