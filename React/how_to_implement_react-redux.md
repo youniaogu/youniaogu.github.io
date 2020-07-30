@@ -1,8 +1,8 @@
 ### 如何实现 React-redux
 
-示例代码：[github](https://github.com/youniaogu/simple-react-redux)
-
-注意：下文中的`state`均是指 redux 里存储的状态
+> 示例 demo：[github](https://github.com/youniaogu/simple-react-redux)
+>
+> 注意：为了简单明了的展示主要流程，下面示例中均会省略异常情况的处理。
 
 #### 一、什么是 react-redux？
 
@@ -90,7 +90,7 @@ connect 有四个传参
 
 如果想详细了解`Context`的详细用法和说明，可以去 React 官网查看[文档](https://reactjs.org/docs/context.html)
 
-#### 三、开始动手
+#### 三、动手
 
 目标：实现`connect`和`Provider`
 
