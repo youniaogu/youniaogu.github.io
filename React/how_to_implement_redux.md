@@ -468,3 +468,9 @@ function createStore(reducer, enhancer) {
 `dispatchWithMiddleware`为引用类型，在绑定中间件后又会重新赋值，所以这里最好的解法就是“闭包”，将变量存在内存里维持起来。
 
 所以这里传入函数，是为了触发闭包维持变量。
+
+#### 参考资料
+
+[Redux从设计到源码](https://tech.meituan.com/2017/07/14/redux-design-code.html)
+
+[图解Redux中middleware的洋葱模型](https://github.com/fi3ework/blog/issues/14)
