@@ -56,3 +56,29 @@ handleClick = evt => {
   });
 </div>
 ```
+
+##### 题外话
+
+关于`evt.target`和`evt.currentTarget`的区别
+
+- `target`指的是当前触发事件的元素
+- `currentTarget`指的是绑定事件的元素
+
+举个例子：
+
+```javascript
+handleClick = evt => {
+  console.log({
+    target: evt.target,
+    currentTraget: evt.currentTarget
+  });
+};
+```
+
+```html
+<div class="wrapper" onClick="{this.handleClick}">
+  <p>dom1</p>
+</div>
+```
+
+当点击 dom1 时，`target`为 p 元素，而`currentTarget`则是 div 元素，因为事件绑定在它上面
