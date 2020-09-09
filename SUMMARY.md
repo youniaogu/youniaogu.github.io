@@ -5,6 +5,7 @@
   - [如何实现 Redux](./React/how_to_implement_redux.md)
   - [如何实现 React-redux](./React/how_to_implement_react-redux.md)
   - [什么是 Reselect](./React/what_is_reselect.md)
+  - [Redux-saga 中取消 fetch 请求](./React/cancel_fetch_in_redux-saga.md)
 - [其他](./Other/README.md#other)
   - [返回函数的函数](./Other/function_return_function.md)
   - [如何定义 action type](./Other/how_to_definition_action_type.md)
