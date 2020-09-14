@@ -453,11 +453,11 @@ function createStore(reducer, enhancer) {
 可能有些人已经注意到了奇怪的地方。
 
 ```javascript
-// why not
+//为什么不直接传dispatch
 {
   dispatch, getState;
 }
-
+//而是传递匿名函数
 {
   dispatch: action => dispatchWithMiddleware(action), getState;
 }
@@ -471,6 +471,6 @@ function createStore(reducer, enhancer) {
 
 #### 参考资料
 
-[Redux从设计到源码](https://tech.meituan.com/2017/07/14/redux-design-code.html)
+[Redux 从设计到源码](https://tech.meituan.com/2017/07/14/redux-design-code.html)
 
-[图解Redux中middleware的洋葱模型](https://github.com/fi3ework/blog/issues/14)
+[图解 Redux 中 middleware 的洋葱模型](https://github.com/fi3ework/blog/issues/14)
