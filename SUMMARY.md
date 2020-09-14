@@ -11,3 +11,4 @@
   - [如何定义 action type](./Other/how_to_definition_action_type.md)
   - [input 限制输入](./Other/how_to_limit_in_react_input.md)
   - [为什么用 fetch](./Other/why_fetch.md)
+  - [前端版本号定义](./Other/version_of_fontend_project.md)
