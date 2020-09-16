@@ -4,7 +4,7 @@
 
 那么定义为变量有什么好处和坏处？
 
-##### 好处：能够很好定位拼写错误
+##### 1. 好处：能够很好定位拼写错误
 
 ```javascript
 // actions.js
@@ -30,14 +30,14 @@ export function loadUserInfo(id) {
 
 当`action`为字符串时，并不会提示报错，但对应的`reducer`与`saga`部分不会运行，而往往为了找出这种低级错误，会浪费很多时间
 
-##### 坏处：使用时会麻烦一些，需要引入`action`
+##### 2. 坏处：使用时会麻烦一些，需要引入`action`
 
 ```javascript
 // sagas.js | createAction.js | reducers.js
 import { LOAD_USER_LIST, LOAD_USER_INFO } from "./actions.js";
 ```
 
-#### 思考
+##### 3. 思考
 
 大项目逻辑复杂查错不易，`action`定义为变量更为严谨，可以规避一些低级错误
 
