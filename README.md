@@ -1,5 +1,5 @@
 ## 介绍
 
-Hello, this is **JIGU's KT**(Knowledge Tree), my aims is become the **two-tenths**。
+Hello, this is JIGU's blog, my aims is become the two-tenths。
 
-learn have three step，**what - how - why**
+learn have three step，what - how - why

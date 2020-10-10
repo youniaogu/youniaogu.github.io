@@ -55,7 +55,7 @@ function Input(props) {
   this.IOSver = IOSVer();
 
   handleInputChange = evt => {
-    const { onChange, formatter } = this.props;
+    const { name, onChange, formatter } = this.props;
 
     if (typeof onChange === "function") {
       let value = evt.target.value;
@@ -63,9 +63,7 @@ function Input(props) {
         value = formatter(value);
       }
 
-      evt.target.value = value;
-
-      onChange(evt);
+      onChange({ target: { value, name } });
     }
   };
   const handleComposition = evt => {

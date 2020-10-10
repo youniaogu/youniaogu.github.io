@@ -1,4 +1,4 @@
-# Summary
+# 概览
 
 - [介绍](README.md)
 - [React](./React/README.md)
@@ -13,6 +13,8 @@
 - [其他](./Other/README.md#other)
   <!-- - [关于 history 的小知识](./Other/the_tips_of_history.md) -->
   - [返回函数的函数](./Other/function_return_function.md)
+  - [浮点数计算问题](./Other/floating_point_calculation_problem.md)
+  - [宏任务和微任务](./Other/tasks_and_microtasks.md)
   - [防抖和节流](./Other/debounce_and_throttle.md)
   - [如何定义 action type](./Other/how_to_definition_action_type.md)
   - [input 限制输入](./Other/how_to_limit_in_react_input.md)
