@@ -35,7 +35,7 @@ Promise.resolve().then(() => {
 
 <img src="../static/15.png" width="400" />
 
-在视频有一道十分有趣的题：
+在[视频](https://youtu.be/cCOL7MC4Pl0?t=1803)中有一道十分有趣的题：
 
 <img src="../static/16.png" width="600" />
 
