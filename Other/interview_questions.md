@@ -4,7 +4,7 @@
 
 ```javascript
 function New(fn, ...args) {
-  let obj = new Object();
+  let obj = {};
 
   obj.__proto__ = fn.prototype;
 
@@ -88,13 +88,13 @@ function binaySearch(array, data) {
   }
 }
 
-a.forEach(data => console.log(binaySearch(a, data)));
+a.forEach((data) => console.log(binaySearch(a, data)));
 ```
 
 ##### 5. 冒泡排序
 
 ```javascript
-Array.prototype.bubbleSort = function() {
+Array.prototype.bubbleSort = function () {
   let isSorted = false;
 
   for (let i = 0; i < this.length - 1; i++) {
@@ -131,7 +131,7 @@ Array.prototype.bubbleSort = function() {
 将选取的数插入到已经排序好的数组里
 
 ```javascript
-Array.prototype.insertSort = function() {
+Array.prototype.insertSort = function () {
   for (let i = 1; i < this.length; i++) {
     const current = this[i];
 
@@ -150,7 +150,7 @@ Array.prototype.insertSort = function() {
 每次遍历选择出最小的那个放在最前面
 
 ```javascript
-Array.prototype.selectSort = function() {
+Array.prototype.selectSort = function () {
   for (let i = 0; i < this.length - 1; i++) {
     let min = i;
 
@@ -174,7 +174,7 @@ Array.prototype.selectSort = function() {
 在数组中选择一个作为基准，将小于的放在左边，大于的放在右边，再分别对左边和右边进行同样操作（需要用到递归）
 
 ```javascript
-Array.prototype.quickSort = function() {
+Array.prototype.quickSort = function () {
   if (this.length <= 1) {
     return this;
   }
@@ -191,9 +191,40 @@ Array.prototype.quickSort = function() {
     }
   }
 
-  return []
-    .concat(left.quickSort())
-    .concat(mid)
-    .concat(right.quickSort());
+  return [].concat(left.quickSort()).concat(mid).concat(right.quickSort());
+};
+```
+
+##### 9. 实现 call,apply,bind
+
+```javascript
+Function.prototype.CALL = function (context, ...args) {
+  context.fn = this;
+  context.fn(...args);
+
+  delete context.fn;
+};
+Function.prototype.APPLY = function (context, args) {
+  context.fn = this;
+  context.fn(...args);
+
+  delete context.fn;
+};
+Function.prototype.BIND = function (context, ...args) {
+  const self = this;
+
+  function RETURNFN(...bindArgs) {
+    let contextOrThis = context;
+    if (this instanceof RETURNFN) {
+      contextOrThis = this;
+    }
+
+    contextOrThis.fn = self;
+    contextOrThis.fn(...args, ...bindArgs);
+    delete contextOrThis.fn;
+  }
+
+  RETURNFN.prototype = this.prototype;
+  return RETURNFN;
 };
 ```

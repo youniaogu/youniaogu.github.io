@@ -64,7 +64,7 @@
   <p>top为5个订单的高度</p>
 </div>
 
-下面代码为了直接体现虚拟列表的实现，没有进行 api 抽象
+下面代码为了直接体现虚拟列表的实现，**没有进行 api 抽象**，详细请看：[github](https://github.com/youniaogu/react-demo/blob/master/src/virtual-list/index.js)
 
 ```javascript
 import React, { Component } from "react";
@@ -161,7 +161,7 @@ class VirtualList extends Component {
 export default VirtualList;
 ```
 
-除了设置 height 来撑开滚动容器的高度，还可以使用 padding 和 margin，但需要额外计算 bottom 的距离
+除了设置`height`来撑开滚动容器的高度，还可以使用`padding`和`margin`，但需要额外计算 bottom 的距离
 
 <img src="../static/31.png" width="400" />
 
@@ -177,7 +177,7 @@ export default VirtualList;
 
 ##### 5. 白屏？
 
-有好处就有坏处，虚拟列表在快速滑动时，onScroll 事件响应的速度如果未能跟上滑动的速度，就会导致向下滑动话新的页面没能及时渲染出来，这就是白屏问题
+有好处就有坏处，虚拟列表在快速滑动时，`onScroll`事件响应的速度如果未能跟上滑动的速度，就会导致向下滑动话新的页面没能及时渲染出来，这就是白屏问题
 
 <img src="../static/26.png" width="400" />
 
@@ -189,7 +189,7 @@ export default VirtualList;
 
 ##### 6. 缓存
 
-增加缓存只需要修改 startIndex 和 endIndex 的逻辑即可
+增加缓存只需要修改`startIndex`和`endIndex`的逻辑即可
 
 ```javascript
 import React, { Component } from "react";
