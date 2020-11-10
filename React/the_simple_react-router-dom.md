@@ -4,13 +4,13 @@
 >
 > 本文代码比较粗糙，有能力建议自行看源码
 
-##### 1. 前言
+#### 1. 前言
 
 react-router-dom 是基于`history`库开发的 react 路由管理库，这里主要简单讲解 react-router-dom 的 api，理解他们的作用和流程，**而`history`部分将不深入讨论**
 
 > 下面的实现和讲解主要基于 class，无 hook 部分
 
-##### 2. api 介绍
+#### 2. api 介绍
 
 react-router-dom 主要有`BrowserRouter`、`HashRouter`、`Router`、`Switch`、`Route`、`Link`、`Redirect`、`withRouter` 这几个常用 api，其中 `BrowserRouter`、`HashRouter`是`Router`封装后的 api
 
@@ -30,7 +30,7 @@ react-router-dom 主要有`BrowserRouter`、`HashRouter`、`Router`、`Switch`�
 
 下面会贴出自己简化后的代码，来理解 api 的实现原理
 
-##### 3. Router
+#### 3. Router
 
 1. 绑定`history`监听函数，当路由变化时修改 state
 2. 将`location`、`history`和`match`通过`context`传递下去
@@ -93,7 +93,7 @@ export class Router extends Component {
 
 > 未加载完成的情况下使用 setState，严格模式下会报错，正常模式下会失败无提示
 
-##### 4. BrowserRouter ｜ HashRouter
+#### 4. BrowserRouter ｜ HashRouter
 
 1. 使用`createBrowserHistory`和`createHashHistory`创建实例
 2. 通过 props 传递给 Router
@@ -127,7 +127,7 @@ export class HashRouter extends Component {
 }
 ```
 
-##### 5. Switch
+#### 5. Switch
 
 `Switch`里会像数组遍历那样遍历 children，依次将 props 上面的 path 或者 from 和 context 里的 location.pathname 进行比对，将第一个匹配成功的 children 渲染出来
 
@@ -189,7 +189,7 @@ export class Switch extends Component {
 
 源码里注释解释了为什么不用 toArray().find 而是 forEach，原因在于 toArray 需要给每个 children 添加 key，当多个 Route 使用同一个 component 的时候，会出现同时触发一个组件的 unmount 和 remount 的情况，他们不希望这样
 
-##### 5. Route
+#### 5. Route
 
 `Route`的工作很单一，根据是否匹配来判断是否渲染组件
 
@@ -219,7 +219,7 @@ export class Route extends Component {
 }
 ```
 
-##### 6. Link
+#### 6. Link
 
 下面代码虽然能实现相应的功能，但与源码相差较大，源码里关于 ref 的转发做了比较多的操作，建议直接参考源码的实现
 
@@ -255,7 +255,7 @@ export class Link extends Component {
 }
 ```
 
-##### 7. Redirect
+#### 7. Redirect
 
 官方没有用 class 实现`Redirect`，而是设计为 function 类型，返回`Lifecycle`组件，使用`Lifecycle`的生命周期来触发跳转，并没有直接跳转，而是稍微绕了一下
 
@@ -292,7 +292,7 @@ export class Redirect extends Component {
 }
 ```
 
-##### 8. withRouter
+#### 8. withRouter
 
 为了满足其他组件能够手动的进行路由跳转，需要将`history`对象暴露出来
 
@@ -317,7 +317,7 @@ export function withRouter(WrapComponent) {
 }
 ```
 
-##### 8. 写在最后
+#### 8. 写在最后
 
 在看了源码并简单实现后，让我惊讶的是 Link 比想象中要复杂很多，以及 pathname 的匹配方法，还有 Switch 的匹配方式
 

@@ -1,6 +1,6 @@
 ### 虚拟列表
 
-##### 1. 前言
+#### 1. 前言
 
 我们先来看个问题：
 
@@ -26,7 +26,7 @@
 
 但订单列表容器最多只能显示 5 个订单组件，也就是说订单 6-100 暂时是无用的，只有订单 1-5 是必须渲染的，只需要渲染必要的元素，这就是虚拟列表的核心思想
 
-##### 2. 什么是虚拟列表？
+#### 2. 什么是虚拟列表？
 
 简单来说，就是通过计算，动态展示列表的一部分，达到节约资源的效果
 
@@ -51,7 +51,7 @@
   </div>
 </div>
 
-##### 3. 固定高度实现
+#### 3. 固定高度实现
 
 在滚动后，我们需要计算 top 的值
 
@@ -97,10 +97,10 @@ class VirtualList extends Component {
     this.setState({
       visibleData,
       startOffset,
-      offsetHeight
+      offsetHeight,
     });
   };
-  handleScroll = e => {
+  handleScroll = (e) => {
     const scrollTop = this.node.scrollTop;
     const index = scrollTop / this.itemHeight;
 
@@ -111,14 +111,14 @@ class VirtualList extends Component {
     this.updateVisibleData();
   };
 
-  renderListItem = item => {
+  renderListItem = (item) => {
     return (
       <div
         key={item}
         style={{
           height: this.itemHeight,
           boxSizing: "border-box",
-          borderBottom: "1px solid black"
+          borderBottom: "1px solid black",
         }}
       >
         {item}
@@ -135,9 +135,9 @@ class VirtualList extends Component {
           position: "relative",
           overflowY: "auto",
           height: this.height,
-          border: "1px solid black"
+          border: "1px solid black",
         }}
-        ref={node => (this.node = node)}
+        ref={(node) => (this.node = node)}
         onScroll={this.handleScroll}
       >
         <div style={{ height: this.totalHeight }}>
@@ -147,7 +147,7 @@ class VirtualList extends Component {
               left: 0,
               right: 0,
               top: startOffset,
-              height: offsetHeight
+              height: offsetHeight,
             }}
           >
             {visibleData.map(this.renderListItem)}
@@ -165,7 +165,7 @@ export default VirtualList;
 
 <img src="../static/31.png" width="400" />
 
-##### 4. 测试
+#### 4. 测试
 
 下面是 react 创建长度为 100000 的列表需要的时间，其中渲染和 js 脚本占了大部分时间，分别是 4.9s 和 1.5s，渲染久很容易理解，毕竟需要处理 100000 个 dom 元素，脚本久主要是因为 react 里虚拟 dom 处理的原因
 
@@ -175,7 +175,7 @@ export default VirtualList;
 
 <img src="../static/29.png" />
 
-##### 5. 白屏？
+#### 5. 白屏？
 
 有好处就有坏处，虚拟列表在快速滑动时，`onScroll`事件响应的速度如果未能跟上滑动的速度，就会导致向下滑动话新的页面没能及时渲染出来，这就是白屏问题
 
@@ -187,7 +187,7 @@ export default VirtualList;
 
 上面图示里，订单列表尾部多渲染了 3 个订单作为缓存，只要一次滑动的距离不超过 3 个订单高度，即使事件响应和渲染速度较慢，也不会出现白屏问题（向上滑动同理，只要首部增加缓存即可）
 
-##### 6. 缓存
+#### 6. 缓存
 
 增加缓存只需要修改`startIndex`和`endIndex`的逻辑即可
 
@@ -239,7 +239,7 @@ class VirtualList extends Component {
 
 <img src="../static/30.gif" width="500" />
 
-##### 7. 动态高度实现
+#### 7. 动态高度实现
 
 上面的场景和实现都是以列表子元素固定高度来实现，那如果高度不固定该怎么办？
 

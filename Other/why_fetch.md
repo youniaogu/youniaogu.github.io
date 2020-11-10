@@ -2,19 +2,19 @@
 
 下面罗列了网上经常讨论，关于 fetch 的缺点，以及目前的解决方案
 
-##### 1. 没有自动 stringify
+#### 1. 没有自动 stringify
 
 封装抽象方法，很简单
 
-##### 2. 接口抛出 4xx、5xx 类错误会归到成功里，只有网络错误才会抛出 reject
+#### 2. 接口抛出 4xx、5xx 类错误会归到成功里，只有网络错误才会抛出 reject
 
 400 ≤ status < 600 情况下，可以在 then 里通过 res.ok 判断是否为错误情况，在根据 status 进行处理，而网络请求错误则在 catch 里处理
 
-##### 3. 缺少默认配置
+#### 3. 缺少默认配置
 
 需要自己封装默认的`headers`或`credentials`，不能开箱即用
 
-##### 4. 兼容性
+#### 4. 兼容性
 
 IE 不兼容
 
@@ -22,26 +22,26 @@ IE 不兼容
 
 如果需要兼容 IE，可以考虑使用[whatwg-fetch](https://github.com/github/fetch)，这是个 polyfill 库，原理是使用 XMLHttpRequest 来模拟 fetch
 
-##### 5. 请求超时、取消请求
+#### 5. 请求超时、取消请求
 
 可以使用[AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController/AbortController)实现相关功能
 
-##### 6. 下载进度
+#### 6. 下载进度
 
 可以使用[ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream)实现相关功能
 
-##### 7. 上传进度
+#### 7. 上传进度
 
 暂无解决方案
 
-#### 优点
+##### 优点
 
 1. 语法上比较简单简洁
 2. 基于浏览器提供的原生方法，使用`promise`实现
 3. 属于原生 js 系列，不需要引入第三方库
 4. 属于底层 api，能够自行封装和控制
 
-#### 对比 axios
+##### 对比 axios
 
 axios 是应用于 web 和 node 的 http 请求第三方库，使用`promise`，web 基于`XMLHttpRequest`实现，node 基于`http`模块实现
 
@@ -49,7 +49,7 @@ axios 功能十分强大，基本上 fetch 能做到的 axios 都能做到，甚
 
 可以说 axios 是全面碾压 fetch，那么还有什么理由坚持 fetch 呢？请继续往下看
 
-#### 为什么坚持 fetch
+##### 为什么坚持 fetch
 
 1. fetch 作为底层 api，目前除了上传进度无解以外，其他都有对应的处理方法，只要抽象封装后完全能够应对大部分的场景
 

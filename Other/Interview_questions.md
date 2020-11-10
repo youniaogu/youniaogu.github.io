@@ -1,6 +1,6 @@
 ### 面试题汇总
 
-##### 1. 实现 New 关键字
+#### 1. 实现 New 关键字
 
 ```javascript
 function New(fn, ...args) {
@@ -18,7 +18,7 @@ function New(fn, ...args) {
 }
 ```
 
-##### 2. [Array.prototype.flat](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+#### 2. [Array.prototype.flat](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
 flat 的作用是根据指定的数组深度摊平数组，可以使用 [Infinity](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)(无穷大)展开任意深度的数组
 
@@ -46,7 +46,7 @@ function flatDeep(arr, d = 1) {
 flatDeep(arr1, Infinity);
 ```
 
-##### 3. [下面的代码打印什么内容，为什么？](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/48)
+#### 3. [下面的代码打印什么内容，为什么？](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/48)
 
 ```javascript
 var b = 10;
@@ -62,7 +62,7 @@ var b = 10;
 
 <p></p>
 
-##### 4. 二分查找
+#### 4. 二分查找
 
 注意：二分查找是特定在有序数组里才能使用的查找算法
 
@@ -91,7 +91,7 @@ function binaySearch(array, data) {
 a.forEach((data) => console.log(binaySearch(a, data)));
 ```
 
-##### 5. 冒泡排序
+#### 5. 冒泡排序
 
 ```javascript
 Array.prototype.bubbleSort = function () {
@@ -122,7 +122,7 @@ Array.prototype.bubbleSort = function () {
 
 使用`haveSort`标记一次冒泡中是否有互换，如果没有，表明列表已经是排序完成，结束冒泡
 
-##### 6. 插入排序
+#### 6. 插入排序
 
 插入排序建议结合下图理解
 
@@ -145,7 +145,7 @@ Array.prototype.insertSort = function () {
 };
 ```
 
-##### 7. 选择排序
+#### 7. 选择排序
 
 每次遍历选择出最小的那个放在最前面
 
@@ -169,7 +169,7 @@ Array.prototype.selectSort = function () {
 };
 ```
 
-##### 8. 快速排序
+#### 8. 快速排序
 
 在数组中选择一个作为基准，将小于的放在左边，大于的放在右边，再分别对左边和右边进行同样操作（需要用到递归）
 
@@ -195,7 +195,7 @@ Array.prototype.quickSort = function () {
 };
 ```
 
-##### 9. 实现 call,apply,bind
+#### 9. 实现 call,apply,bind
 
 ```javascript
 Function.prototype.CALL = function (context, ...args) {

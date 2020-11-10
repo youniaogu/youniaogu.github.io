@@ -13,7 +13,7 @@
 
 #### 一、combineReducer
 
-###### 1. combineReducer 是什么，有什么用？
+##### 1. combineReducer 是什么，有什么用？
 
 因为`createStore`只能接收一个`reducer`，如果把所有的`reducer`都写在一起的话会很臃肿，所以需要将其分割为一个个小的`reducer`，分别负责一部分的 state，再合并成一个`rootReducer`。
 
@@ -23,27 +23,27 @@
 >
 > 不理解的话，可以看下边的执行前后代码
 
-###### 2. combineReducer 执行前后代码
+##### 2. combineReducer 执行前后代码
 
 ```javascript
 export default combineReducer({
   list: listReducers,
   dict: dictReducers,
-  detail: detailReducers
+  detail: detailReducers,
 });
 
 //↓↓↓等价于↓↓↓
 
-export default function(state, action) {
+export default function (state, action) {
   return {
     list: listReducers(state.list, action),
     dict: dictReducers(state.dict, action),
-    detail: detailReducers(state.detail, action)
+    detail: detailReducers(state.detail, action),
   };
 }
 ```
 
-###### 3. 实现 combineReducer
+##### 3. 实现 combineReducer
 
 遍历传入的对象拿到所有的 key 值，使用 key 值拿到对应的旧状态，将旧状态和动作传入`reducer`，获取最新状态并返回，实现起来并不复杂。
 
@@ -51,7 +51,7 @@ export default function(state, action) {
 function combineReducer(reducers) {
   const reducerKeys = Object.keys(reducers);
 
-  return function(state, action) {
+  return function (state, action) {
     const nextState = {};
     for (let i = 0; i < reducerKeys.length; i++) {
       const key = reducerKeys[i];
@@ -66,7 +66,7 @@ function combineReducer(reducers) {
 }
 ```
 
-###### 4. redux 是如何实现 combineReducer？
+##### 4. redux 是如何实现 combineReducer？
 
 对比下源码
 
@@ -82,7 +82,7 @@ function combineReducer(reducers) {
   }
   const finalReducerKeys = Object.keys(finalReducers);
 
-  return function(state = {}, action) {
+  return function (state = {}, action) {
     let hasChange = false;
     const nextState = {};
     for (let i = 0; i < finalReducerKeys.length; i++) {
@@ -106,7 +106,7 @@ function combineReducer(reducers) {
 
 #### 二、compose
 
-###### 1. compose 有什么作用？
+##### 1. compose 有什么作用？
 
 `compose`主要用于中间件的整合，接收多个函数传参，返回单个函数。当执行返回函数时，相当于嵌套执行传参的函数。
 
@@ -122,7 +122,7 @@ function Fn(...args) {
 }
 ```
 
-###### 2. 如何实现？
+##### 2. 如何实现？
 
 思路很简单，可以用循环遍历，返回嵌套函数，也可以用`reduce`方法
 
@@ -130,7 +130,7 @@ function Fn(...args) {
 //第一种
 function compose(...fns) {
   if (fns.length === 0) {
-    return arg => arg;
+    return (arg) => arg;
   }
 
   if (fns.length === 1) {
@@ -149,7 +149,7 @@ function compose(...fns) {
 //第二种
 function compose(...fns) {
   if (fns.length === 0) {
-    return arg => arg;
+    return (arg) => arg;
   }
 
   if (fns.length === 1) {
@@ -180,7 +180,7 @@ function compose(...fns) {
 
 `createStore`返回`{dispatch<Function>, getState<Function>, subscribe<Function>}`
 
-###### 1. 定义 createStore 的传参和输出
+##### 1. 定义 createStore 的传参和输出
 
 ```javascript
 function createStore(reducer, enhancer) {
@@ -194,7 +194,7 @@ function createStore(reducer, enhancer) {
   return {
     dispatch,
     subscribe,
-    getState
+    getState,
   };
 }
 ```
@@ -205,7 +205,7 @@ function createStore(reducer, enhancer) {
 - `getState`：返回当前的 state
 - `subscribe`：订阅监听函数，返回取消订阅方法
 
-###### 2. 补全方法
+##### 2. 补全方法
 
 ```javascript
 function createStore(reducer, enhancer) {
@@ -237,14 +237,14 @@ function createStore(reducer, enhancer) {
   return {
     dispatch,
     subscribe,
-    getState
+    getState,
   };
 }
 ```
 
 #### 四、applyMiddleware
 
-###### 1. 中间件
+##### 1. 中间件
 
 传入的中间件必须是规定的柯里化函数`({ getState, dispatch }) => next => action`。
 
@@ -253,13 +253,13 @@ function createStore(reducer, enhancer) {
 可以简单理解为：
 
 ```javascript
-({ getState, dispatch }) => next => action;
+({ getState, dispatch }) => (next) => action;
 
 //↓↓↓等价于↓↓↓
 
 function middleware({ getState, dispatch }) {
-  return function(next) {
-    return function(action) {
+  return function (next) {
+    return function (action) {
       // ...do something
       return next(action);
     };
@@ -271,7 +271,7 @@ function middleware({ getState, dispatch }) {
 
 > 这部分代码不多，但复杂程度却是最高的，建议提前看下源码或是了解下洋葱模型。
 
-###### 2. 源码(简化版)
+##### 2. 源码(简化版)
 
 ```javascript
 function createStore(reducer, enhancer) {
@@ -313,7 +313,7 @@ function applyMiddleware(...middlewares) {
 其中最重要最复杂的绑定部分代码，只有两条。
 
 ```javascript
-chain = middlewares.map(middleware => middleware(middlewareAPI));
+chain = middlewares.map((middleware) => middleware(middlewareAPI));
 dispatch = compose(...chain)(store.dispatch);
 ```
 
@@ -322,21 +322,21 @@ dispatch = compose(...chain)(store.dispatch);
 
 第一句很好理解，第二句也不难，`compose`上面有讲解，最后剩下一点，那就是 next 的绑定。
 
-###### 3. 绑定 next
+##### 3. 绑定 next
 
 中间件定义伪代码。
 
 ```javascript
 //中间件A
 function middlewareA(next_A) {
-  return function(action) {
+  return function (action) {
     // do something for middlewareA
     return next_A(action);
   };
 }
 //中间件B
 function middlewareB(next_B) {
-  return function(action) {
+  return function (action) {
     // do something for middlewareB
     return next_B(action);
   };
@@ -371,7 +371,7 @@ function next_A(action) {
 }
 ```
 
-###### 4. 绑定顺序和执行顺序
+##### 4. 绑定顺序和执行顺序
 
 `applyMiddleware`可以接收多个中间件传参，并从右到左依次绑定中间件，但当`dispatch`时，中间件的执行顺序却是从左到右（这也是为什么`redux-logger`要放在最后面）。
 
@@ -397,7 +397,7 @@ function next_A(action) {
 
 绑定中间件相当于在`dispatch`外包一层又一层的裹上，而当执行中间件时则需要从外到内顺序执行，所以执行顺序和绑定顺序是相反的
 
-###### 5. 实现
+##### 5. 实现
 
 观看还不够，只有实际动手后才会明白里面的细节和关键，最后是我的实现。
 
@@ -448,7 +448,7 @@ function createStore(reducer, enhancer) {
 
 写法上有区别，但核心内容上没有区别。
 
-###### 6. 注意
+##### 6. 注意
 
 可能有些人已经注意到了奇怪的地方。
 
@@ -459,7 +459,7 @@ function createStore(reducer, enhancer) {
 }
 //而是传递匿名函数
 {
-  dispatch: action => dispatchWithMiddleware(action), getState;
+  dispatch: (action) => dispatchWithMiddleware(action), getState;
 }
 ```
 

@@ -5,7 +5,7 @@
 react 里经常需要在`map`返回的元素里绑定事件，这种时候我们经常会使用这以技巧
 
 ```javascript
-handleClick = index => {
+handleClick = (index) => {
   return () => {
     console.log(index);
   };
@@ -25,7 +25,7 @@ list.map((obj, index) => {
 所以如果不是特别依赖闭包的话，可以把数据挂在 dom 元素上，通过`event`对象去获取，这样只需要创建一个函数
 
 ```javascript
-handleClick = evt => {
+handleClick = (evt) => {
   console.log(evt.currentTarget.dataset.index);
 };
 
@@ -57,7 +57,7 @@ handleClick = evt => {
 </div>
 ```
 
-##### 题外话
+#### 题外话
 
 关于`evt.target`和`evt.currentTarget`的区别
 
@@ -67,10 +67,10 @@ handleClick = evt => {
 举个例子：
 
 ```javascript
-handleClick = evt => {
+handleClick = (evt) => {
   console.log({
     target: evt.target,
-    currentTraget: evt.currentTarget
+    currentTraget: evt.currentTarget,
   });
 };
 ```

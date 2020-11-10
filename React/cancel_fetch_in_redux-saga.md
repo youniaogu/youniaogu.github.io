@@ -4,11 +4,11 @@
 
 redux-saga 可以使用`cancel`取消任务，但并不能取消已经发起的请求。而`xhr`、`fetch`都提供了取消请求的方法，所以我们可以通过封装`fetch`，在取消任务的同时取消请求。
 
-#### 关于 fetch 请求的取消
+#### 1. 关于 fetch 请求的取消
 
 参考[AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController/AbortController)
 
-#### 原理
+#### 2. 原理
 
 yield 关键字在被取消时候会抛出错误，所以只需要用`generator`函数包住`fetch`请求，在里面通过`try catch`获取错误，最后取消请求
 
@@ -22,7 +22,7 @@ function* fetchData(options) {
   try {
     return yield fetchDataWithoutCancel({
       ...options,
-      signal: controller.signal
+      signal: controller.signal,
     });
   } finally {
     controller.abort();
@@ -30,7 +30,7 @@ function* fetchData(options) {
 }
 ```
 
-#### 实际运用
+#### 3. 实际运用
 
 ##### 与`takeLatest`结合使用：
 
@@ -52,12 +52,12 @@ function* cancelFetchSaga() {
 
 ```javascript
 function* cancelFetchSaga() {
-  yield takeLatest("CANCEL_FETCH", function*() {
+  yield takeLatest("CANCEL_FETCH", function* () {
     const { data, timeout } = yield race({
       data: call(fetchData, {
-        url: "http://httpstat.us/200?sleep=2000"
+        url: "http://httpstat.us/200?sleep=2000",
       }),
-      timeout: delay(1000)
+      timeout: delay(1000),
     });
 
     if (timeout) {
@@ -71,7 +71,7 @@ function* cancelFetchSaga() {
 
 1s 后请求会被取消
 
-#### 测试用工具
+#### 4. 测试用工具
 
 1. [httpstat](http://httpstat.us/)，可以自定义返回延迟
 
