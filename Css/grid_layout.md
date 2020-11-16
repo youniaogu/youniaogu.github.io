@@ -3,6 +3,7 @@
 MDN 里对 grid 的介绍和对比其他布局讲解的十分详细，想仔细学习的建议点进下面的链接
 
 [网格布局的基本概念](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+
 [grid layout 和其它布局方法的联系](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 
 下面部分是我对链接里重要内容的截取，以及自己的理解
@@ -22,6 +23,7 @@ CSS 网格在对 row 进行控制的同时，还能控制 column，而弹性盒�
 这个问题在 Flexbox 上并不是无解，有两种方法：
 
 - justify-content 使用 flex-start，计算各个子元素的 width、margin，让它刚好 3 个时换行
+
 - justify-content 使用 space-between，在末尾行不满时添加填充，让其按 3 个元素进行分割
 
 grid 的话很简单：
@@ -36,7 +38,7 @@ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))相当于 flex: 1 0 1
 
 grid-template-columns: repeat(auto-fit, minmax(0, 100px))相当于 flex: 0 1 100px;
 
-grid-template-columns: repeat(auto-fit, minmax(0, 1fr))相当于 flex: 1 1 100px;
+grid-template-columns: repeat(auto-fit, minmax(0, 1fr))相当于 flex: 1 1 auto;
 
 ##### 3. auto-fill 和 auto-fit 的区别是什么？
 
