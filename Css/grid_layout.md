@@ -8,7 +8,7 @@ MDN 里对 grid 的介绍和对比其他布局讲解的十分详细，想仔细�
 
 下面部分是我对链接里重要内容的截取，以及自己的理解
 
-##### 1. CSS 网格布局和弹性盒布局的区别
+#### 1. CSS 网格布局和弹性盒布局的区别
 
 **CSS 网格布局**和**弹性盒布局**的主要区别在于[弹性盒布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)是为一维布局服务的（沿横向或纵向的），而网格布局是为二维布局服务的（同时沿着横向和纵向）。这两个规格有一些相同的特性。如果你已经掌握如何使用弹性盒布局的话，你可能会想知道这些相似之处怎样在能帮助你掌握网格布局
 
@@ -32,7 +32,7 @@ grid 的话很简单：
 
 可以看到，flex 虽然也能实现，但相比 grid 来说比较复杂
 
-##### 2. 使用 auto-fit 和 minmax 模拟 flex
+#### 2. 使用 auto-fit 和 minmax 模拟 flex
 
 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))相当于 flex: 1 0 100px;
 
@@ -40,7 +40,7 @@ grid-template-columns: repeat(auto-fit, minmax(0, 100px))相当于 flex: 0 1 100
 
 grid-template-columns: repeat(auto-fit, minmax(0, 1fr))相当于 flex: 1 1 auto;
 
-##### 3. auto-fill 和 auto-fit 的区别是什么？
+#### 3. auto-fill 和 auto-fit 的区别是什么？
 
 auto-fill 会保留后面的匿名格子，auto-fit 则不会
 
@@ -58,7 +58,7 @@ auto-fill 会保留后面的匿名格子，auto-fit 则不会
 
 > auto-fit 更贴近 flex 的特性
 
-##### 4. 我该用哪个？
+#### 4. 我该用哪个？
 
 当抉择该用网格还是弹性盒时，你可以问自己一个简单的问题：
 
@@ -74,7 +74,7 @@ auto-fill 会保留后面的匿名格子，auto-fit 则不会
 
 如果项目对于兼容性要求没有那么严格，可以尝试使用网格布局，网页结构复杂的情况下，相比弹性盒布局能够用更少的元素完成布局（注意避开 Firefox 上的 bug，不要重复使用 repeat()）
 
-##### 5. 盒对齐
+#### 5. 盒对齐
 
 弹性盒特性已经被加入到新规范盒[Box Alignment Level 3](https://drafts.csswg.org/css-align/)。意味它们能被用在包括网格布局的其它规范中。它们未来也可能被用在其他的布局方法中
 
