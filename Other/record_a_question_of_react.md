@@ -1,4 +1,4 @@
-### react 渲染机制
+### 记一个 react 问题
 
 #### 1. 前言
 
@@ -16,8 +16,4 @@
 
 文中使用`children`方法之所以能够解决问题，个人认为`ChildNonTheme`此时并不属于`ThemeApp`的子节点，而是属于`App`，所以`ThemeApp`节点改变时，并不能触发`ChildNonTheme`的渲染（**单纯个人猜测，如有更好解释或发现错误，欢迎指出**）
 
-除了`children`外，还可以使用`React.memo`，对应 Component 写法是`React.PureComponent`，这样不需要改变代码结构，更加方便快捷
-
-#### 4. 思考
-
-未完待续...
+除了`children`外，还可以使用`React.memo`，对应 Component 写法是`React.PureComponent`，这样不需要改变代码结构，更加方便

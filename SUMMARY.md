@@ -8,7 +8,6 @@
   - [什么是 reselect](./React/what_is_reselect.md)
   - [redux-saga 中取消 fetch 请求](./React/cancel_fetch_in_redux-saga.md)
   - [如何使用 typescript](./React/how_to_use_typescript.md)
-  <!-- - [react 渲染机制](./React/render_in_react.md) -->
 - [Css](./Css/README.md#other)
   - [网格布局](./Css/grid_layout.md)
 - [其他](./Other/README.md#other)
@@ -23,3 +22,4 @@
   - [input 限制输入](./Other/how_to_limit_in_react_input.md)
   - [为什么用 fetch](./Other/why_fetch.md)
   - [前端版本号定义](./Other/version_of_fontend_project.md)
+  - [记一个 react 问题](./Other/record_a_question_of_react.md)

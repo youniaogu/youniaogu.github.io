@@ -10,3 +10,4 @@
 - [input 限制输入](./how_to_limit_in_react_input.md)
 - [为什么用 fetch](./why_fetch.md)
 - [前端版本号定义](./version_of_fontend_project.md)
+- [记一个 react 问题](./record_a_question_of_react.md)
