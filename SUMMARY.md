@@ -7,7 +7,7 @@
   - [react-router-dom 简单讲解](./React/the_simple_react-router-dom.md)
   - [什么是 reselect](./React/what_is_reselect.md)
   - [redux-saga 中取消 fetch 请求](./React/cancel_fetch_in_redux-saga.md)
-  - [如何使用 typescript](./React/how_to_use_typescript.md)
+  - [typescript 实践心得](./React/practice_experience_of_typescript.md)
 - [Css](./Css/README.md#other)
   - [网格布局](./Css/grid_layout.md)
 - [其他](./Other/README.md#other)

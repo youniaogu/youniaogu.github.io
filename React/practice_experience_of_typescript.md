@@ -1,6 +1,12 @@
-### 如何使用 typescript？
+### typescript 实践心得
 
-> 总结：typescript 的静态检查能够规避很多错误，越用越香。但是类型检查需要环环相扣，如果运用不当，将会成为如梗在喉般的存在
+先说下总结：
+
+> 1. typescript 的静态检查能够规避很多错误，越用越香。
+>
+> 2. 类型检查需要环环相扣，如果运用不当，将会成为如梗在喉般的存在
+>
+> 3. redux 的单一数据源思想与 typescript 十分搭配
 
 #### 1. 前言
 
@@ -159,7 +165,42 @@ const app = ((state: RootTypes) => state.app)(yield select())
 
 **写法简单，但与最初的逻辑有出入**，比如进行测试时，需要传入整个 state
 
-#### 6. 写在最后
+#### 6. 全局变量
+
+`ActionTypes`和`RootTypes`都是唯一的，只需要在全局定义这两个类型，就可以减少导入代码花费的时间
+
+step 1. 确认`tsconfig.json`里的配置，把全局配置的`.d.ts`文件放在编译的范围内即可
+
+step 2. 写入全局类型
+
+```javascript
+//actions.js
+...
+export type ActionTypes =
+  | ReturnType<typeof launch>
+  | ReturnType<typeof launchCompletion>
+  | ReturnType<typeof loadUserList>
+  | ReturnType<typeof loadUserListCompletion>
+
+//reducers.js
+...
+export type RootTypes = ReturnType<typeof rootReducer>;
+export default rootReducer;
+
+// global.d.ts
+declare type RootTypes = import('reducers').RootTypes;
+declare type ActionTypes = import('actions').ActionTypes;
+```
+
+step 3. 需要注意的点
+
+第一，import 导入是在 typescript2.9 加入的，并且只能导入类型
+
+第二，在添加全局类型后，有可能会出现编译器报错，而编译通过的问题(见下图)，重启 vscode 即可解决
+
+<img src="../static/33.png" width="600" alt="33.png" />
+
+#### 7. 写在最后
 
 最开始使用 typescript，新手上路，不知道如何使用范型，写了很多重复的类型定义，费时又费力。而且修改 redux 里的 state 定义，需要修改好几处的 props，是真的很难受，**感觉很不值得**
 
