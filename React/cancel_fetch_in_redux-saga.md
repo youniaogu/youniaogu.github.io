@@ -77,4 +77,4 @@ function* cancelFetchSaga() {
 
 2. chrome network 里设置 throtting
 
-![pic2](../static/2.png)
+![pic2](../static/screenshots/2.png)

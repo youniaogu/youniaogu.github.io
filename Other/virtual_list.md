@@ -18,11 +18,11 @@
 
 一个订单列表容器高 200px，一个订单组件高 50px，也就是说最多能完整显示 4 个订单（部分出现的话是 5 个）
 
-<img src="../static/21.png" width="300" />
+<img src="../static/screenshots/21.png" width="300" />
 
 这时后台接口返回 100 个订单，于是我们把 100 个订单都渲染出来
 
-<img src="../static/22.png" width="150" />
+<img src="../static/screenshots/22.png" width="150" />
 
 但订单列表容器最多只能显示 5 个订单组件，也就是说订单 6-100 暂时是无用的，只有订单 1-5 是必须渲染的，只需要渲染必要的元素，这就是虚拟列表的核心思想
 
@@ -36,17 +36,17 @@
 
 <div style="display: flex; align-items: center; text-align: center;">
   <div>
-    <img src="../static/23.png" width="150" />
+    <img src="../static/screenshots/23.png" width="150" />
     <p>（1）初始状态</p>
   </div>
   <span>　=>　</span>
   <div>
-    <img src="../static/24.png" width="150" />
+    <img src="../static/screenshots/24.png" width="150" />
     <p>（2）滑动一段距离</p>
   </div>
   <span>　=>　</span>
   <div>
-    <img src="../static/25.png" width="150" />
+    <img src="../static/screenshots/25.png" width="150" />
     <p>（3）重新渲染后</p>
   </div>
 </div>
@@ -56,11 +56,11 @@
 在滚动后，我们需要计算 top 的值
 
 <div style="display: inline-block; padding: 0 20px 0 0;">
-  <img src="../static/23.png" width="150" />
+  <img src="../static/screenshots/23.png" width="150" />
   <p>top为4个订单的高度</p>
 </div>
 <div style="display: inline-block">
-  <img src="../static/25.png" width="150" />
+  <img src="../static/screenshots/25.png" width="150" />
   <p>top为5个订单的高度</p>
 </div>
 
@@ -163,27 +163,27 @@ export default VirtualList;
 
 除了设置`height`来撑开滚动容器的高度，还可以使用`padding`和`margin`，但需要额外计算 bottom 的距离
 
-<img src="../static/31.png" width="400" />
+<img src="../static/screenshots/31.png" width="400" />
 
 #### 4. 测试
 
 下面是 react 创建长度为 100000 的列表需要的时间，其中渲染和 js 脚本占了大部分时间，分别是 4.9s 和 1.5s，渲染久很容易理解，毕竟需要处理 100000 个 dom 元素，脚本久主要是因为 react 里虚拟 dom 处理的原因
 
-<img src="../static/28.png" />
+<img src="../static/screenshots/28.png" />
 
 再下面是 react 创建长度为 100000 的虚拟列表需要的时间，可以看到 0.5s 都不到就渲染好了
 
-<img src="../static/29.png" />
+<img src="../static/screenshots/29.png" />
 
 #### 5. 白屏？
 
 有好处就有坏处，虚拟列表在快速滑动时，`onScroll`事件响应的速度如果未能跟上滑动的速度，就会导致向下滑动话新的页面没能及时渲染出来，这就是白屏问题
 
-<img src="../static/26.png" width="400" />
+<img src="../static/screenshots/26.png" width="400" />
 
 可以尝试缓存的方式，在首尾额外渲染一部分的元素，有一定缓存距离，这样不那么容易出现白屏问题，但事实上，滑动速度要是快过缓存距离还是会有白屏现象，尤其是**拖动滚动条**，所以说并不能完全解决问题
 
-<img src="../static/27.png" width="500" />
+<img src="../static/screenshots/27.png" width="500" />
 
 上面图示里，订单列表尾部多渲染了 3 个订单作为缓存，只要一次滑动的距离不超过 3 个订单高度，即使事件响应和渲染速度较慢，也不会出现白屏问题（向上滑动同理，只要首部增加缓存即可）
 
@@ -237,7 +237,7 @@ class VirtualList extends Component {
 
 增加`cache`参数，修改`handleScroll`函数
 
-<img src="../static/30.gif" width="500" />
+<img src="../static/screenshots/30.gif" width="500" />
 
 #### 7. 动态高度实现
 

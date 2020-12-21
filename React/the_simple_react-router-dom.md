@@ -185,7 +185,7 @@ export class Switch extends Component {
 
 我们知道 forEach 遍历是不能中断的，而 find、some 等方法在满足条件后会自动退出遍历，性能上会比 forEach 更好，为什么这里要用 forEach？
 
-![3.png](../static/3.png)
+![3.png](../static/screenshots/3.png)
 
 源码里注释解释了为什么不用 toArray().find 而是 forEach，原因在于 toArray 需要给每个 children 添加 key，当多个 Route 使用同一个 component 的时候，会出现同时触发一个组件的 unmount 和 remount 的情况，他们不希望这样
 

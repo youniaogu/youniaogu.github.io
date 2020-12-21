@@ -49,16 +49,16 @@ class Counter extends component {
   }
 }
 
-const mapStateToProps = function(state, ownProps) {
+const mapStateToProps = function (state, ownProps) {
   return {
-    counter: state.counter
+    counter: state.counter,
   };
 };
 
-const mapDispatchToProps = function(dispatch, ownProps) {
+const mapDispatchToProps = function (dispatch, ownProps) {
   return {
     add: dispatch(dispatchAdd),
-    reduce: dispatch(dispatchReduce)
+    reduce: dispatch(dispatchReduce),
   };
 };
 
@@ -105,7 +105,7 @@ import PropTypes from "prop-types";
 const StoreContext = React.createContext();
 
 export function connect(mapStateToProps, mapDispatchToProps) {
-  return function(WrappedComponent) {
+  return function (WrappedComponent) {
     return class connect extends Component {
       render() {
         return <WrappedComponent {...this.props} />;
@@ -129,8 +129,8 @@ Provider.propTypes = {
   store: PropTypes.shape({
     subscribe: PropTypes.func.isRequired,
     dispatch: PropTypes.func.isRequired,
-    getState: PropTypes.func.isRequired
-  })
+    getState: PropTypes.func.isRequired,
+  }),
 };
 ```
 
@@ -262,7 +262,7 @@ export function connect(mapStateToProps, mapDispatchToProps) {
 
 在`shouldComponentUpdate`中，根据前后的`storeState`和`mapStateToProps`的结果来决定是否需要`render`
 
-![pic1](../static/1.png)
+![pic1](../static/screenshots/1.png)
 
 可以看到点击 add 按钮后，只触发了`counter`的`render`，达到了预期的效果（这里`render`两次是因为`React.StrictMode`，详细可以看[issues](https://github.com/facebook/react/issues/15074)）
 

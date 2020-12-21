@@ -126,7 +126,7 @@ Array.prototype.bubbleSort = function () {
 
 插入排序建议结合下图理解
 
-![20.gif](../static/20.gif)
+![20.gif](../static/screenshots/20.gif)
 
 将选取的数插入到已经排序好的数组里
 
