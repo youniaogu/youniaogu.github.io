@@ -16,7 +16,7 @@ const wrapper = shallow(<App />);
 
 通过[babel tranfer online](https://babeljs.io/repl/#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=FBA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&timeTravel=false&sourceType=module&lineWrap=false&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.12.9&externalPlugins=)编译，发现箭头函数与普通函数处理有点不同
 
-> 代码经过简化，对源码感兴趣，建议自行编译查看
+> 为了易于理解，以下编译后代码经过简化，如果对非简化部分感兴趣，建议自行编译查看
 
 ```javascript
 class App {
@@ -109,8 +109,33 @@ function App() {
 
 #### 3. 继承
 
-最后是继承和`super`的编译后结果
+最后再研究下继承以及`super`编译后的结果
 
-<!-- ```javascript
+```javascript
+class A {}
+class B extends A {}
+```
 
-``` -->
+```javascript
+function A() {}
+
+function B() {
+  _B.prototype = {
+    ...A.prototype,
+    constructor: _B,
+  };
+  _B.__proto__ = A;
+
+  var super = function () {
+    const result = _B.__proto__.apply(this, arguments);
+
+    return result;
+  };
+
+  function _B() {
+    return super.apply(this, arguments);
+  }
+
+  return _B;
+}
+```
