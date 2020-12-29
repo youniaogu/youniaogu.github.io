@@ -12,7 +12,6 @@
 - [Css](./Css/README.md#other)
   - [网格布局](./Css/grid_layout.md)
 - [其他](./Other/README.md#other)
-  <!-- - [关于 history 的小知识](./Other/the_tips_of_history.md) -->
   - [返回函数的函数](./Other/function_return_function.md)
   - [浮点数计算问题](./Other/floating_point_calculation_problem.md)
   - [宏任务和微任务](./Other/tasks_and_microtasks.md)
@@ -24,3 +23,4 @@
   - [为什么用 fetch](./Other/why_fetch.md)
   - [前端版本号定义](./Other/version_of_fontend_project.md)
   - [记一个 react 问题](./Other/record_a_question_of_react.md)
+  - [通过 babel 看 class](./Other/learn_about_class_through_babel.md)

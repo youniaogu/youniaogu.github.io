@@ -1,4 +1,4 @@
-### 通过 babel 来看 class
+### 通过 babel 看 class
 
 #### 1. 前言
 
@@ -117,25 +117,35 @@ class B extends A {}
 ```
 
 ```javascript
-function A() {}
+var A = function A() {};
 
-function B() {
-  _B.prototype = {
-    ...A.prototype,
-    constructor: _B,
-  };
-  _B.__proto__ = A;
-
+var B = (function B(_A) {
+  //super相当于new关键字
   var super = function () {
-    const result = _B.__proto__.apply(this, arguments);
+    var Super = _B.__proto__;
+    var result = Super.apply(this, arguments);
 
-    return result;
+    if (
+      result &&
+      (_typeof(result) === "object" || typeof result === "function")
+    ) {
+      return result;
+    }
+    return this;
   };
 
   function _B() {
+    //相当于new B(...arguments)
     return super.apply(this, arguments);
   }
 
+  //继承_A的prototype，并将原型指向_A
+  _B.prototype = {
+    ..._A.prototype,
+    constructor: _B,
+  };
+  _B.__proto__ = _A;
+
   return _B;
-}
+})(A);
 ```
