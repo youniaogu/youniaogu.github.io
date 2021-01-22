@@ -8,7 +8,7 @@
   - [什么是 reselect](./React/what_is_reselect.md)
   - [redux-saga 中取消 fetch 请求](./React/cancel_fetch_in_redux-saga.md)
   - [typescript 实践心得](./React/practice_experience_of_typescript.md)
-  - [单元测试](./React/unit_test.md)
+  <!-- - [单元测试](./React/unit_test.md) -->
 - [Css](./Css/README.md#other)
   - [网格布局](./Css/grid_layout.md)
 - [其他](./Other/README.md#other)
