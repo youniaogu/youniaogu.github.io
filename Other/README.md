@@ -11,3 +11,4 @@
 - [为什么用 fetch](./why_fetch.md)
 - [前端版本号定义](./version_of_fontend_project.md)
 - [通过 babel 看 class](./learn_about_class_through_babel.md)
+- [更好的线性渐变背景](./better_linear_gradient_background.md)
