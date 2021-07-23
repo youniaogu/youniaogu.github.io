@@ -42,11 +42,11 @@ puppeteer:
 
 <p class="box_flex margin_bottom10">
   <img class="icon" src="./name.png" />
-  <span class="font_size15">姓名： 罗建平（男）　</span>
+  <span class="font_size15">姓名： XXX（X）　</span>
   <img class="icon" src="./email.png" />
-  <span class="font_size15">邮箱： 1257857309@qq.com　</span>
+  <span class="font_size15">邮箱： XXXXXXXXXXXX　</span>
   <img class="icon" src="./phone.png" />
-  <span class="font_size15">联系方式： 13715112475</span>
+  <span class="font_size15">联系方式： XXXXXXXXXXX</span>
 </p>
 <p class="box_flex margin_bottom10">
   <img class="icon" src="./github.png" style="vertical-align: bottom;" />
@@ -59,7 +59,7 @@ puppeteer:
 
 <p class="float_text margin_bottom10">
   <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">主要的技术栈和未来发展方向是React，熟悉移动端H5和中台系统的开发，有独立开发的能力，热爱前端，喜欢研究和技术分享</span>
+  <span class="font_size15">三年前端开发，技术栈React，熟悉H5、中台系统以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
 </p>
 <ul class="margin_bottom10">
   <li class="margin_left8">熟悉 React、Redux、Redux-saga、React-redux，掌握前端状态管理</li>
@@ -85,10 +85,10 @@ puppeteer:
   </span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">新项目，独立开发</span>
+  我的职责：<span class="font_size15">前端部分独立开发，包括项目架构设计与搭建</span>
 </p>
 <p class="margin_bottom10">
-  技术相关：<span class="font_size15">原生小程序，redux状态管理，rollup打包至miniprogram_npm，分离业务逻辑与UI，劫持生命周期封装成connect</span>
+  技术相关：<span class="font_size15">原生小程序，redux状态管理，rollup打包至miniprogram_npm，分离业务逻辑与UI，通过劫持生命周期封装出connect</span>
 </p>
 
 <p class="box_flex margin_bottom5">
@@ -114,7 +114,7 @@ puppeteer:
   我的职责：<span class="font_size15">项目搭建，分配任务，对接链家sdk以及需求开发</span>
 </p>
 <p class="margin_bottom10">
-  技术相关：<span class="font_size15">typescript开发，redux状态管理，redux-saga处理异步逻辑，基于vw适配，后台主要是echarts</span>
+  技术相关：<span class="font_size15">typescript开发，redux状态管理，redux-saga处理异步逻辑，使用vw适配，后台主要是echarts</span>
 </p>
 
 <p class="box_flex margin_bottom5">
