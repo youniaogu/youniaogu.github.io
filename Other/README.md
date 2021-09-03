@@ -12,3 +12,4 @@
 - [前端版本号定义](./version_of_fontend_project.md)
 - [通过 babel 看 class](./learn_about_class_through_babel.md)
 - [更好的线性渐变背景](./better_linear_gradient_background.md)
+- [微信小程序开发经验分享](./experience_of_build_wechat_miniapp.md)
