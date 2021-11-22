@@ -54,12 +54,12 @@ puppeteer:
     博客： <a href="https://youniaogu.github.io/blog/" target="_blank">https://youniaogu.github.io/blog/　</a>
   </span>
   <img class="icon" src="./university.png" />
-  <span class="font_size15">学历：华南农业大学 软件工程（2014.09-2018.06）</span>
+  <span class="font_size15">学历：XXXX大学 软件工程（xxxx.xx-xxxx.xx）</span>
 </p>
 
 <p class="float_text margin_bottom10">
   <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">三年前端开发，技术栈React，熟悉H5、中台系统以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
+  <span class="font_size15">三年前端开发，React技术栈，熟悉后台系统、H5以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
 </p>
 <ul class="margin_bottom10">
   <li class="margin_left8">熟悉 React、Redux、Redux-saga、React-redux，掌握前端状态管理</li>
@@ -73,7 +73,7 @@ puppeteer:
   <img class="icon" src="./working.png" />工作经历：
 </p>
 <ul class="margin_bottom10">
-  <li class="margin_left8">2020.05 ~ 现在 　前端开发 　贝壳找房</li>
+  <li class="margin_left8">2020.05 ~ 2021.10 　前端开发 　贝壳找房</li>
   <li class="margin_left8">2018.06 ~ 2019.12 　前端开发 　西碧信息</li>
 </ul>
 
@@ -130,17 +130,3 @@ puppeteer:
 <p class="margin_bottom10">
   技术相关：<span class="font_size15">小程序原生开发，redux状态管理，公众号和小程序共用action、reducer、saga，H5使用rem适配</span>
 </p>
-
-<!-- <p class="box_flex margin_bottom5">
-  <img class="icon" src="./four.png" />Admin-ui/js
-</p>
-<p class="margin_bottom5">
-  项目介绍：<span class="font_size15">管理后台使用的ui组件和方法库，在与产品交流后，抽象出需要的组件，统一规范，让所有的管理后台都基于此开发，很大程度提高了开发效率
-  </span>
-</p>
-<p class="margin_bottom5">
-  我的职责：<span class="font_size15">交流并收集需求，抽象ui组件和封装fetch并增加接口自动取消，还有旧项目的重构</span>
-</p>
-<p>
-  技术相关：<span class="font_size15">基于antd、fetch、moment抽象封装，项目之间使用yarn workspaces进行依赖</span>
-</p> -->
