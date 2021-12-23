@@ -130,20 +130,17 @@ function Fn(...args) {
 //第一种
 function compose(...fns) {
   if (fns.length === 0) {
-    return (arg) => arg;
+    return;
   }
 
-  if (fns.length === 1) {
-    return fns[0];
-  }
-
-  let composeFn = (...args) => fns[0](...args);
+  let componseFn = (...args) => fns[0](...args);
 
   for (let i = 1; i < fns.length; i++) {
-    composeFn = composeFn((...args) => fns[i](...args));
+    let prevFn = componseFn;
+    componseFn = (...args) => prevFn(fns[i](...args));
   }
 
-  return composeFn;
+  return componseFn;
 }
 
 //第二种
