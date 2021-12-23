@@ -54,27 +54,27 @@ puppeteer:
     博客： <a href="https://youniaogu.github.io/blog/" target="_blank">https://youniaogu.github.io/blog/　</a>
   </span>
   <img class="icon" src="./university.png" />
-  <span class="font_size15">学历：XXXX大学 软件工程（xxxx.xx-xxxx.xx）</span>
+  <span class="font_size15">学历：XXXX大学 软件工程（XXXX.XX-XXXX.XX）</span>
 </p>
 
 <p class="float_text margin_bottom10">
   <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">三年前端开发，React技术栈，熟悉后台系统、H5以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
+  <span class="font_size15">三年前端开发，React技术栈，熟悉H5、小程序以及后台系统的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
 </p>
 <ul class="margin_bottom10">
   <li class="margin_left8">熟悉 React、Redux、Redux-saga、React-redux，掌握前端状态管理</li>
   <li class="margin_left8">熟悉 ES6 语法，阅读 Redux、React-redux 源码，了解它们的原理</li>
   <li class="margin_left8">熟悉 Typescript，有相应的开发经验，熟练运用 Flexbox 和 Grid 布局</li>
+  <li class="margin_left8">了解 Nextjs、Node、ECharts、微信小程序和一些基础的算法</li>
   <li class="margin_left8">了解 Webpack、Prettierrc、ESLint、CI 等前端工具的配置</li>
-  <li class="margin_left8">了解 Jest单元测试、Node、微信小程序和一些基础的算法</li>
 </ul>
 
 <p class="box_flex margin_bottom3">
   <img class="icon" src="./working.png" />工作经历：
 </p>
 <ul class="margin_bottom10">
-  <li class="margin_left8">2020.05 ~ 2021.10 　前端开发 　贝壳找房</li>
-  <li class="margin_left8">2018.06 ~ 2019.12 　前端开发 　西碧信息</li>
+  <li class="margin_left8">2020.05 ~ 2021.10　前端开发　贝壳找房</li>
+  <li class="margin_left8">2018.06 ~ 2019.12　前端开发　西碧信息</li>
 </ul>
 
 <p class="box_flex margin_bottom5">

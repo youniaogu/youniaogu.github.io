@@ -49,19 +49,14 @@ export default function (state, action) {
 
 ```javascript
 function combineReducer(reducers) {
-  const reducerKeys = Object.keys(reducers);
-
   return function (state, action) {
     const nextState = {};
-    for (let i = 0; i < reducerKeys.length; i++) {
-      const key = reducerKeys[i];
-      const reducer = reducers[key];
-      const prevState = state[key];
-      const nextState = reducer(prevState, action);
 
-      result[key] = nextState;
+    for (let key in reducers) {
+      nextState[key] = reducers[key](state[key], action);
     }
-    return result;
+
+    return nextState;
   };
 }
 ```
