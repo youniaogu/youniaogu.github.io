@@ -322,47 +322,66 @@ dispatch = compose(...chain)(store.dispatch);
 中间件定义伪代码。
 
 ```javascript
-//中间件A
-function middlewareA(next_A) {
-  return function (action) {
-    // do something for middlewareA
-    return next_A(action);
+function middlewareA({ dispatch, getState }) {
+  return function (next) {
+    return function (action) {
+      console.log("Middleware A");
+      return next(action);
+    };
   };
 }
-//中间件B
-function middlewareB(next_B) {
-  return function (action) {
-    // do something for middlewareB
-    return next_B(action);
+function middlewareB({ dispatch, getState }) {
+  return function (next) {
+    return function (action) {
+      console.log("Middleware B");
+      next(action);
+    };
   };
 }
-```
+// middlewares = [middlewareA, middlewareB]
 
-next 绑定伪代码。
+// middlewares.map((middleware) => middleware(middlewareAPI));
+function middlewareAAfterMap(next) {
+  //闭包里保持着{getState, dispatch}
+  return function (action) {
+    console.log("Middleware A do something");
+    return next(action);
+    console.log("Middleware A finish");
+  };
+}
+function middlewareBAfterMap(next) {
+  //闭包里保持着{getState, dispatch}
+  return function (action) {
+    console.log("Middleware B do something");
+    next(action);
+    console.log("Middleware B finish");
+  };
+}
+// chain = [middlewareAAfterMap, middlewareBAfterMap]
 
-```javascript
-//chain === [middlewareA, middlewareB]
-compose(...chain);
-↓↓↓相当于↓↓↓
+// composedFn = compose(...chain);
 function composedFn(...args) {
-  return middlewareA(middlewareB(...args));
+  return middlewareAAfterMap(middlewareBAfterMap(...args));
 }
 
-composedFn(dispatch);
-↓↓↓相当于↓↓↓
-middlewareA(middlewareB(dispatch);
-↓↓↓相当于↓↓↓
-middlewareA(function next_B(action) {
-  // do something for middlewareB
-  return dispatch(action);
-});
-↓↓↓相当于↓↓↓
-function next_A(action) {
-  // do something for middlewareA
+// newDispatch = composedFn(dispatch);
+// newDispatch = middlewareAAfterMap(middlewareBAfterMap(dispatch))
+function newDispatch(action) {
+  return middlewareAAfterMap(function (action) {
+    console.log("Middleware B do something");
+    dispatch(action);
+    console.log("Middleware B finish");
+  });
+}
+↓↓↓
+function newDispatch(action) {
   return function (action) {
-    // do something for middlewareB
-    return dispatch(action); // 等价于之前的return next_B(action)
-  }(action); // 等价于之前的return next_A(action)
+    console.log("Middleware A do something");
+    console.log("Middleware B do something");
+    dispatch(action);
+    console.log("Middleware B finish");
+    console.log("Middleware A finish");
+  };
 }
 ```
 
@@ -394,7 +413,7 @@ function next_A(action) {
 
 ##### 5. 实现
 
-观看还不够，只有实际动手后才会明白里面的细节和关键，最后是我的实现。
+光看还不够，只有实际动手后才会明白里面的细节和关键，最后是我的实现。
 
 ```javascript
 function applyMiddleware(...middlewares) {
