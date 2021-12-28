@@ -54,12 +54,12 @@ puppeteer:
     博客： <a href="https://youniaogu.github.io/blog/" target="_blank">https://youniaogu.github.io/blog/　</a>
   </span>
   <img class="icon" src="./university.png" />
-  <span class="font_size15">学历：XXXX大学 软件工程（XXXX.XX-XXXX.XX）</span>
+  <span class="font_size15">学历：XXXX大学 软件工程（xxxx.xx-xxxx.xx）</span>
 </p>
 
 <p class="float_text margin_bottom10">
   <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">三年前端开发，React技术栈，熟悉H5、小程序以及后台系统的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
+  <span class="font_size15">三年前端开发，React技术栈，熟悉管理后台、H5以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
 </p>
 <ul class="margin_bottom10">
   <li class="margin_left8">熟悉 React、Redux、Redux-saga、React-redux，掌握前端状态管理</li>
@@ -73,8 +73,8 @@ puppeteer:
   <img class="icon" src="./working.png" />工作经历：
 </p>
 <ul class="margin_bottom10">
-  <li class="margin_left8">2020.05 ~ 2021.10　前端开发　贝壳找房</li>
-  <li class="margin_left8">2018.06 ~ 2019.12　前端开发　西碧信息</li>
+  <li class="margin_left8">2020.05 ~ 2021.10 　前端开发 　贝壳找房</li>
+  <li class="margin_left8">2018.06 ~ 2019.12 　前端开发 　西碧信息</li>
 </ul>
 
 <p class="box_flex margin_bottom5">
