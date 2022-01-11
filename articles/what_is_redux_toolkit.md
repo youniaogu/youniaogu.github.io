@@ -210,7 +210,7 @@ const userSlice = createSlice({
 
 3. 而使用`thunkAPI.rejectWithValue`返回则会进入**rejected**状态（[相关 api](https://redux-toolkit-cn.netlify.app/api/createAsyncThunk#payloadcreator)）
 
-<img src="../static/screenshots/34.png" width="700" alt="34.png" />
+<img src="../images/screenshots/34.png" width="700" alt="34.png" />
 
 #### 5、createEntityAdapter
 

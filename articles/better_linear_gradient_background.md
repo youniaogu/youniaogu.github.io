@@ -14,6 +14,6 @@
 
 ##### 效果图：
 
-<img src="../static/screenshots/35.gif" width='720' />
+<img src="../images/screenshots/35.gif" width='720' />
 
 线上地址：[https://youniaogu.github.io/react-demo/component](https://youniaogu.github.io/react-demo/component)

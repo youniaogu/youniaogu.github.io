@@ -198,7 +198,7 @@ step 3. 需要注意的点
 
 第二，在添加全局类型后，有可能会出现编译器报错，而编译通过的问题(见下图)，重启 vscode 即可解决
 
-<img src="../static/screenshots/33.png" width="600" alt="33.png" />
+<img src="../images/screenshots/33.png" width="600" alt="33.png" />
 
 #### 7. 写在最后
 
@@ -208,6 +208,6 @@ step 3. 需要注意的点
 
 typescript 是 javascript 的超集，语法上学习起来很简单，但要想有个好的体验和实践，没有想象中那么简单，就跟画马一样
 
-<img src="../static/screenshots/32.png" width="300" alt="32.png" />
+<img src="../images/screenshots/32.png" width="300" alt="32.png" />
 
 希望这篇文章对你有所帮助，谢谢！

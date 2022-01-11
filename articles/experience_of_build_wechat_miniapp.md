@@ -50,7 +50,7 @@
 
 引入 redux 就需要 connect，小程序没有现成，所以我们得自行封装。有两种思路，一个是[behaviors](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Behavior.html)，另一个是[Component](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)，原理都是劫持生命周期，注入 redux 订阅事件。
 
-<img src="../static/screenshots/37.png" width="800" />
+<img src="../images/screenshots/37.png" width="800" />
 
 因为我们用到[redux-saga](https://redux-saga.js.org/docs/introduction/GettingStarted)做异步处理，里面带有`generator function`，所以打包时需要引入`@babel/plugin-transform-runtime`。
 
@@ -78,7 +78,7 @@ replace({
 
 接下来是环境区分，建议打包环境与[wx.getAccountInfoSync](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/account-info/wx.getAccountInfoSync.html)结合使用，下面是我项目里的环境区分。
 
-<img src="../static/screenshots/36.png" width="400" />
+<img src="../images/screenshots/36.png" width="400" />
 
 这样写的好处有两点：
 
@@ -99,17 +99,17 @@ replace({
 
 思路：组件 Layout 控制页面是否渲染，hold（一个 Behavior）通过劫持页面来维持生命周期，直到 Layout 发出通行的信号才执行。通过控制生命周期和页面渲染，达到控制页面的效果，同时组件与 Behavior 都能复用，减少重复率。
 
-<img src="../static/screenshots/38.png" width="800" />
+<img src="../images/screenshots/38.png" width="800" />
 
 BUG：开发时发现页面内组件的生命周期无法维持，需要增加`wx:if="{{!HOLDING}}"`
 
-<img src="../static/screenshots/39.png" width="400" />
+<img src="../images/screenshots/39.png" width="400" />
 
 ### 3. 最后
 
 #### 3.1 关于 eslint
 
-<img src="../static/screenshots/40.png" width="400" />
+<img src="../images/screenshots/40.png" width="400" />
 
 如果使用 eslint，请指定使用到的微信 api，因为编辑器不知道微信的全局 api 有那些，会直接报错。
 

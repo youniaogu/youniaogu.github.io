@@ -262,7 +262,7 @@ export function connect(mapStateToProps, mapDispatchToProps) {
 
 在`shouldComponentUpdate`中，根据前后的`storeState`和`mapStateToProps`的结果来决定是否需要`render`
 
-![pic1](../static/screenshots/1.png)
+![pic1](../images/screenshots/1.png)
 
 可以看到点击 add 按钮后，只触发了`counter`的`render`，达到了预期的效果（这里`render`两次是因为`React.StrictMode`，详细可以看[issues](https://github.com/facebook/react/issues/15074)）
 

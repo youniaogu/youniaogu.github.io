@@ -6,7 +6,7 @@
 
 举个 🌰：
 
-<img src="../static/screenshots/9.png" width="200" />
+<img src="../images/screenshots/9.png" width="200" />
 
 可以看到 0.1+0.2 的结果并不是 0.3，0.1+0.7 也不是 0.8，是什么问题导致这些误差的呢？
 
@@ -18,11 +18,11 @@
 
 0.3 转换为二进制
 
-<img src="../static/screenshots/10.png" width="300" />
+<img src="../images/screenshots/10.png" width="300" />
 
 0.1 转换为二进制
 
-<img src="../static/screenshots/11.png" width="300" />
+<img src="../images/screenshots/11.png" width="300" />
 
 二进制小数存在无限循环，而计算机的存储空间是有限的，不可能无限的存储下去，所以只能存储一部分长度，也就是说**无限循环部分会被截断**，存储起来的将会是一个**近似值**
 
@@ -42,7 +42,7 @@
 
 也就是 2^-52(2 的-52 次方)，计算器里算出结果为
 
-<img src="../static/screenshots/12.png" width="300" />
+<img src="../images/screenshots/12.png" width="300" />
 
 约为 2.22\*10^-16，也就是说精确到小数点后 15 位，加上个位有效位数为 16 位也就是最小精度
 

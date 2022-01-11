@@ -16,7 +16,7 @@ CSS 网格在对 row 进行控制的同时，还能控制 column，而弹性盒�
 
 举个例子，实现 3 行 3 列布局，要求行不满 3 个时左对其：
 
-<img src="../static/screenshots/4.png" width='500' />
+<img src="../images/screenshots/4.png" width='500' />
 
 这时 Flexbox 就会有个常见问题，怎样才能让最后一行单独左对其呢？
 
@@ -48,11 +48,11 @@ auto-fill 会保留后面的匿名格子，auto-fit 则不会
 
 外层是个宽度为 450px 容器，column 使用 repeat(auto-fill, minmax(100px,1fr))，子元素初始宽度为 100px，一共三个，这时容器有多余的 150px
 
-<img src="../static/screenshots/5.png" width='300' />
+<img src="../images/screenshots/5.png" width='300' />
 
 使用 auto-fill 的话，会多生成 1 个 100px 宽度的匿名格子，也就是红色标注的 4，再去分配剩下的 50px 宽度，计算下来每个子元素宽度为 112.5px
 
-<img src="../static/screenshots/6.png" width='300' />
+<img src="../images/screenshots/6.png" width='300' />
 
 使用 auto-fit 的话，则会直接分割多余的 150px，这样每个子元素宽度为 150px
 
@@ -67,8 +67,8 @@ auto-fill 会保留后面的匿名格子，auto-fit 则不会
 
 除了满足布局需求外，我们还需要考虑浏览器兼容性
 
-<img src="../static/screenshots/8.png" width='500' />
-<img src="../static/screenshots/7.png" width='300' />
+<img src="../images/screenshots/8.png" width='500' />
+<img src="../images/screenshots/7.png" width='300' />
 
 可以看到网格布局不兼容 IE，安卓 UC、Opera Mini 未知，Firefox 存在 **bug**，**column 里 repeat()不能重复使用**
 
