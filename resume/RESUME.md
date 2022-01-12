@@ -51,10 +51,10 @@ puppeteer:
 <p class="box_flex margin_bottom10">
   <img class="icon" src="./github.png" style="vertical-align: bottom;" />
   <span class="font_size15">
-    博客： <a href="https://youniaogu.github.io/blog/" target="_blank">https://youniaogu.github.io/blog/　</a>
+    博客： <a href="https://jigu.gitbook.io/jigus-blog/" target="_blank">https://jigu.gitbook.io/jigus-blog/　</a>
   </span>
   <img class="icon" src="./university.png" />
-  <span class="font_size15">学历：XXXX大学 软件工程（xxxx.xx-xxxx.xx）</span>
+  <span class="font_size15">学历：XXXX大学 软件工程（xxxx.xx - xxxx.xx）</span>
 </p>
 
 <p class="float_text margin_bottom10">
