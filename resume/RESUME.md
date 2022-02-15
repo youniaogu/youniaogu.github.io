@@ -59,14 +59,13 @@ puppeteer:
 
 <p class="float_text margin_bottom10">
   <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">三年前端开发，React技术栈，熟悉管理后台、H5以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
+  <span class="font_size15">三年前端开发，React技术栈，熟练管理后台、H5以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
 </p>
 <ul class="margin_bottom10">
-  <li class="margin_left8">熟悉 React、Redux、Redux-saga、React-redux，掌握前端状态管理</li>
-  <li class="margin_left8">熟悉 ES6 语法，阅读 Redux、React-redux 源码，了解它们的原理</li>
-  <li class="margin_left8">熟悉 Typescript，有相应的开发经验，熟练运用 Flexbox 和 Grid 布局</li>
-  <li class="margin_left8">了解 Nextjs、Node、ECharts、微信小程序和一些基础的算法</li>
-  <li class="margin_left8">了解 Webpack、Prettierrc、ESLint、CI 等前端工具的配置</li>
+  <li class="margin_left8">熟练掌握 React、Redux、React-redux、Redux-saga</li>
+  <li class="margin_left8">熟悉 Typescript，Flexbox 和 Grid布局以及移动端适配</li>
+  <li class="margin_left8">了解 Webpack、Prettierrc、ESLint、Yarn、Git 等工具</li>
+  <li class="margin_left8">了解 Vue、Node、Nextjs以及微信小程序</li>
 </ul>
 
 <p class="box_flex margin_bottom3">
@@ -81,52 +80,52 @@ puppeteer:
   <img class="icon" src="./project.png" />项目经历：<img class="icon" src="./one.png" />善贝GO
 </p>
 <p class="margin_bottom5">
-  项目介绍：<span class="font_size15">公益捐步小程序，目前服务于贝壳穿戈壁行公益线下活动，仅公司内部开放。活动结束后捐赠步数会转化为一定的金额，资助给孤寡老人、贫困家庭以及山区小学等，后续将会开放至普通用户
+  项目介绍：<span class="font_size15">公益捐步小程序，供贝壳员工、经纪人使用。由贝壳公益出资，将捐赠步数转化为一定的金额，捐助给山区小学，并奖励用户相应贝壳币
   </span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">前端部分独立开发，包括项目架构设计与搭建</span>
+  我的职责：<span class="font_size15">项目设计、搭建与开发，主要有打包编译Redux到小程序npm中使用，劫持Component生命周期封装Connect相应数据变化，通过Storage封装出Cookies</span>
 </p>
 <p class="margin_bottom10">
-  技术相关：<span class="font_size15">原生小程序，redux状态管理，rollup打包至miniprogram_npm，分离业务逻辑与UI，通过劫持生命周期封装出connect</span>
+  技术栈：<span class="font_size15">原生小程序、Redux、Redux-saga、Reselect、Rollup、Babel</span>
 </p>
 
 <p class="box_flex margin_bottom5">
   <img class="icon" src="./two.png" />链家市占
 </p>
 <p class="margin_bottom5">
-  项目介绍：<span class="font_size15">地图类项目，核心是将链家近10年手工收录的房源和交易信息呈现在地图上，为链家旗下房产从业人员提供技术支持。同时有着一套完整的数据录入、筛选、驳回、修正、发布的后台系统</span>
+  项目介绍：<span class="font_size15">地图类项目，核心是将链家近10年手工收录的房源和交易信息呈现在地图上，为经纪人、经理提供技术支持。有着一套完整的数据录入、筛选、修正、发布的后台系统</span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">接手项目，优化代码架构，缓存接口数据，局部绘制提升性能，同时为不同城市提供定制需求</span>
+  我的职责：<span class="font_size15">接手项目并优化，本地缓存接口数据，绘制由Dom改为Canvas，局部绘制提升性能，同时完成相应业务需求</span>
 </p>
 <p class="margin_bottom10">
-  技术相关：<span class="font_size15">第三方地图api，IndexedDB缓存，canvas绘制商圈、门店、楼盘等</span>
+  技术栈：<span class="font_size15">IndexedDB、Canvas、React、Redux、Redux-thunk、Antd</span>
 </p>
 
 <p class="box_flex margin_bottom5">
   <img class="icon" src="./three.png" />蓝海行动
 </p>
 <p class="margin_bottom5">
-  项目介绍：<span class="font_size15">移动端H5项目，上线在贝壳找房App内，目的是为了鼓励用户和经纪人积极使用VR看房功能，只要在App内使用VR看房相关功能，就可以在蓝海行动里收取相应能量进行种树或兑换贝壳币，除此之外还有组队、签到、留言、浇水等互动功能</span>
+  项目介绍：<span class="font_size15">移动端H5项目，上线在贝壳找房App内，目的是为了鼓励用户和经纪人积极使用VR看房功能，只要在App内使用VR看房相关功能，就可以在蓝海行动里收取相应能量进行种树并兑换贝壳币</span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">项目搭建，分配任务，对接链家sdk以及需求开发</span>
+  我的职责：<span class="font_size15">H5对接链家sdk、部分需求开发以及可视化后台开发，前后台均使用Typescript</span>
 </p>
 <p class="margin_bottom10">
-  技术相关：<span class="font_size15">typescript开发，redux状态管理，redux-saga处理异步逻辑，使用vw适配，后台主要是echarts</span>
+  技术栈：<span class="font_size15">Typescript、React、Redux、Redux-saga、vw适配、Antd、Echarts</span>
 </p>
 
 <p class="box_flex margin_bottom5">
   <img class="icon" src="./four.png" />CB优选
 </p>
 <p class="margin_bottom5">
-  项目介绍：<span class="font_size15">微信电商平台，主营美妆相关，根据消费额度和邀新数量，将用户进行分级管理，给予不同的分佣返利，鼓励用户通过各种活动拉新裂变，有公众号和小程序，还有对应的权限、活动、仓储等管理后台
+  项目介绍：<span class="font_size15">微信电商平台，主营美妆相关，根据消费额度和邀新数量，将用户进行分级管理，给予不同的分佣返利，鼓励用户通过各种活动拉新裂变，有公众号和小程序，以及对应的权限、活动、仓储等管理后台
   </span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">官网更新，小程序购物车、秒杀、拼团以及H5会员模块开发，管理后台维护和开发</span>
+  我的职责：<span class="font_size15">主要负责电商管理后台开发，其次官网更新以及H5小程序业务开发</span>
 </p>
 <p class="margin_bottom10">
-  技术相关：<span class="font_size15">小程序原生开发，redux状态管理，公众号和小程序共用action、reducer、saga，H5使用rem适配</span>
+  技术栈：<span class="font_size15">React、Redux、Redux-saga、Antd、rem适配</span>
 </p>
