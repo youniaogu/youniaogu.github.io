@@ -58,14 +58,15 @@ puppeteer:
 </p>
 
 <p class="float_text margin_bottom10">
-  <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">三年前端开发，React技术栈，熟练管理后台、H5以及小程序的开发，有独立开发的能力。热爱前端，追求细节，喜欢研究和技术分享</span>
+  <img class="icon" src="./puzzle.png" />简介：
+  <span class="font_size15"> 三年前端，React技术栈，熟练管理后台、H5以及微信小程序的开发。动手能力强，喜欢学习与分享</span>
 </p>
 <ul class="margin_bottom10">
-  <li class="margin_left8">熟练掌握 React、Redux、React-redux、Redux-saga</li>
-  <li class="margin_left8">熟悉 Typescript，Flexbox 和 Grid布局以及移动端适配</li>
-  <li class="margin_left8">了解 Webpack、Prettierrc、ESLint、Yarn、Git 等工具</li>
-  <li class="margin_left8">了解 Vue、Node、Nextjs以及微信小程序</li>
+  <li class="margin_left8">熟练掌握 HTML5、CSS3、Javascript、ES6</li>
+  <li class="margin_left8">熟练掌握 React、Redux、React-redux、Redux-saga、React-router</li>
+  <li class="margin_left8">熟悉 Antd组件库，Flex、Grid布局以及移动端适配</li>
+  <li class="margin_left8">熟悉 Typescript、Rollup、微信小程序，实际项目中使用并上线</li>
+  <li class="margin_left8">了解 Webpack、Vue、Node、Nextjs、React-Native</li>
 </ul>
 
 <p class="box_flex margin_bottom3">
@@ -84,7 +85,7 @@ puppeteer:
   </span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">项目设计、搭建与开发，主要有打包编译Redux到小程序npm中使用，劫持Component生命周期封装Connect相应数据变化，通过Storage封装出Cookies</span>
+  我的职责：<span class="font_size15">项目设计、搭建与开发，主要有打包编译Redux到小程序npm中使用，劫持Component生命周期封装Connect响应数据变化，通过Storage封装出Cookies</span>
 </p>
 <p class="margin_bottom10">
   技术栈：<span class="font_size15">原生小程序、Redux、Redux-saga、Reselect、Rollup、Babel</span>
@@ -124,7 +125,7 @@ puppeteer:
   </span>
 </p>
 <p class="margin_bottom5">
-  我的职责：<span class="font_size15">主要负责电商管理后台开发，其次官网更新以及H5小程序业务开发</span>
+  我的职责：<span class="font_size15">主要负责电商管理后台需求开发，以及旧后台迁移(Vue＝>React)，其次官网更新以及H5小程序业务开发</span>
 </p>
 <p class="margin_bottom10">
   技术栈：<span class="font_size15">React、Redux、Redux-saga、Antd、rem适配</span>
