@@ -2,6 +2,10 @@
 
 - [介绍](./README.md)
 
+### 2022/04
+
+- [说谎的 console.log](./articles/console_log_what_a_lier.md)
+
 ### 2022/03
 
 - [如何处理 package-lock.json 与 yarn.lock](./articles/how_to_handle_lock_file.md)
