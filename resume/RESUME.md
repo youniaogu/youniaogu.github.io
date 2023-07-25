@@ -81,7 +81,7 @@ puppeteer:
 <ul class="mb5">
   <li class="margin_left8">熟练掌握HTML5、CSS3、Javascript、HTTP、Chrome调试等前端基础</li>
   <li class="margin_left8">熟练掌握React及Redux-Toolkit、Redux-saga等生态库</li>
-  <li class="margin_left8">熟练使用React-Native、React-Navigation、Native-Base(类Tailwind CSS)进行跨平台开发</li>
+  <li class="margin_left8">熟练使用React-Native、React-Navigation、Native-Base(类TailwindCSS)进行跨平台开发</li>
   <li class="margin_left8">熟练使用Typescript、Webpack、Rollup、Esbuild、CI/CD进行项目构建和部署</li>
   <li class="margin_left8">熟悉微信小程序、SSR(Nextjs)的开发以及Nodejs的使用提升开发效率</li>
 </ul>
@@ -101,7 +101,7 @@ puppeteer:
 <p class="flex_box mb0">MangaReader（Github开源 - 2022-04 ～ 至今）</p>
 <ul class="mb5">
   <li class="margin_left8">漫画App，主要从网上抓取免费资源并呈现，插件式设计且适用十个漫画网站，全数据本地离线化处理。支持收藏、分类搜索、批量更新、备份恢复，漫画下载和导出、无限翻页等。</li>
-  <li class="margin_left8">基于React-Native开发，兼容Ios、Android并适配平板。全Typescript支持，使用类Tailwind Css进行主题设计，使用Redux-saga进行任务队列控制。</li>
+  <li class="margin_left8">基于React-Native开发，兼容Ios、Android并适配平板。全Typescript支持，使用类TailwindCss进行主题设计，使用Redux-saga进行任务队列控制。</li>
   <li class="margin_left8">独立开发的开源项目(https://github.com/youniaogu/MangaReader)，可以在这里了解我的代码风格和质量。</li>
 </ul>
 
