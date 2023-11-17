@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkyouniaogu=self.webpackChunkyouniaogu||[]).push([[8049],{2494:a=>{a.exports=JSON.parse('{"label":"React-Naitve","permalink":"/blog/tags/react-naitve","allTagsPath":"/blog/tags","count":1}')}}]);

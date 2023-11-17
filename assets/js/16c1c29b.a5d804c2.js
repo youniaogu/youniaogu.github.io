@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkyouniaogu=self.webpackChunkyouniaogu||[]).push([[3647],{6395:a=>{a.exports=JSON.parse('{"label":"MangaReader","permalink":"/blog/tags/manga-reader","allTagsPath":"/blog/tags","count":1}')}}]);
